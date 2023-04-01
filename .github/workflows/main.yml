@@ -1,9 +1,9 @@
-name: Publicar en GitHub Pages
+name: CI Blazor
 
 on:
   push:
     branches:
-      - master # cambiar a la rama principal de tu repositorio
+      - master 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0.407' # cambiar a la versión de .NET Core que estás usando
+        dotnet-version: '6.0.407' 
     - name: Restaurar dependencias, construir y publicar la aplicación
       run: |
         dotnet restore
